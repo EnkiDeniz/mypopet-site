@@ -81,6 +81,17 @@
                               margin-bottom: 0;
                 }
 
+                .tagline .acro {
+                              font-weight: 700;
+                              letter-spacing: 0.02em;
+                }
+
+                .tagline .acro.p1 { color: #f97316; }
+                .tagline .acro.o  { color: #ec4899; }
+                .tagline .acro.p2 { color: #3b82f6; }
+                .tagline .acro.e  { color: #22c55e; }
+                .tagline .acro.t  { color: #8b5cf6; }
+
                 .badge {
                               display: inline-flex;
                               align-items: center;
@@ -122,8 +133,8 @@
 
                 .hero-stats {
                               display: grid;
-                              grid-template-columns: repeat(3, minmax(0, 1fr));
-                              gap: 24px;
+                              grid-template-columns: minmax(0, 1fr) auto auto auto minmax(0, 1fr);
+                              gap: 20px;
                               align-items: center;
                 }
 
@@ -169,10 +180,10 @@
                 }
 
                 .hero-divider {
-                              height: 1px;
-                              width: 100%;
-                              background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent);
-                              margin: 12px 0;
+                              width: 1px;
+                              height: 56px;
+                              background: linear-gradient(180deg, transparent, rgba(148, 163, 184, 0.5), transparent);
+                              justify-self: center;
                 }
 
                 section {
@@ -358,6 +369,13 @@
                                                 width: 72px;
                               }
 
+                              .hero-divider {
+                                                width: 100%;
+                                                height: 1px;
+                                                background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent);
+                                                margin: 4px 0;
+                              }
+
                               .card {
                                                 padding: 24px;
                               }
@@ -380,7 +398,13 @@
                                                   <img class="logo-p" src="favicon-v2.png" alt="POPET logo">
                                                   <span class="logo-text">POPET</span>
                                 </div>
-                                <p class="tagline">Physician On Call Patient Engagement Trial</p>
+                                <p class="tagline">
+                                              <span class="acro p1">P</span>hysician
+                                              <span class="acro o">O</span>n
+                                              <span class="acro p2">P</span>atient
+                                              <span class="acro e">E</span>ngagement
+                                              <span class="acro t">T</span>rial
+                                </p>
                   </header>
 
                   <div class="hero">
