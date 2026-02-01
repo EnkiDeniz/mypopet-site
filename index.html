@@ -121,15 +121,19 @@
                 }
 
                 .hero-stats {
-                              display: flex;
-                              justify-content: center;
-                              gap: 56px;
-                              flex-wrap: wrap;
+                              display: grid;
+                              grid-template-columns: repeat(3, minmax(0, 1fr));
+                              gap: 24px;
+                              align-items: center;
                 }
 
                 .hero-stat {
                               text-align: center;
-                              min-width: 160px;
+                              background: rgba(255, 255, 255, 0.8);
+                              border: 1px solid rgba(226, 232, 240, 0.8);
+                              border-radius: 18px;
+                              padding: 20px 16px;
+                              box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
                 }
 
                 .hero-stat-value {
@@ -148,10 +152,27 @@
                 }
 
                 .vs {
-                              font-size: 14px;
-                              color: var(--text-secondary);
-                              align-self: center;
-                              font-weight: 500;
+                              font-size: 12px;
+                              letter-spacing: 0.16em;
+                              text-transform: uppercase;
+                              color: #64748b;
+                              font-weight: 600;
+                              display: inline-flex;
+                              align-items: center;
+                              justify-content: center;
+                              height: 40px;
+                              width: 64px;
+                              border-radius: 999px;
+                              border: 1px solid #e2e8f0;
+                              background: #ffffff;
+                              margin: 0 auto;
+                }
+
+                .hero-divider {
+                              height: 1px;
+                              width: 100%;
+                              background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.5), transparent);
+                              margin: 12px 0;
                 }
 
                 section {
@@ -321,9 +342,8 @@
                               }
 
                               .hero-stats {
-                                                gap: 12px;
-                                                flex-direction: column;
-                                                align-items: center;
+                                                grid-template-columns: 1fr;
+                                                gap: 14px;
                               }
 
                               .hero-stat-value {
@@ -335,7 +355,7 @@
                               }
 
                               .vs {
-                                                align-self: center;
+                                                width: 72px;
                               }
 
                               .card {
@@ -371,7 +391,9 @@
                                                                   <div class="hero-stat-value">49%</div>
                                                                   <div class="hero-stat-label">Achieved Well-Controlled Asthma (ACT&gt;19)</div>
                                               </div>
-                                              <span class="vs">vs</span>
+                                              <div class="hero-divider" aria-hidden="true"></div>
+                                              <span class="vs" aria-hidden="true">vs</span>
+                                              <div class="hero-divider" aria-hidden="true"></div>
                                               <div class="hero-stat">
                                                                   <div class="hero-stat-value">27%</div>
                                                                   <div class="hero-stat-label">Control Group</div>
